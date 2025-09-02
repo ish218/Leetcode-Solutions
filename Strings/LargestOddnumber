@@ -1,0 +1,18 @@
+class Solution {
+    public String largestOddNumber(String num) {
+        int length = num.length();
+        String LongOdd = "";
+        int i = length - 1;
+        
+        while (i >= 0) {
+            char ch = num.charAt(i);
+            if ((char)(ch) % 2 != 0) {
+                LongOdd = num.substring(0, i + 1);
+                break;
+            } else {
+                i--;
+            }
+        }
+        return LongOdd;
+    }
+}
